@@ -1,0 +1,15 @@
+
+###GETTOKEN
+GET http://localhost:8000/
+
+###POST
+POST http://localhost:8000/pengguna
+Content-Type: application/json
+
+{
+    "_token": "mgjrYQLfQziFUy5olt4rL9nEFs9avD8jGxOKPh1t",
+    "nama": "teS",
+    "jenis_kelamin": "L",
+    "tanggal_lahir": "1990-12-10",
+    "alamat": "jl. test"
+}
