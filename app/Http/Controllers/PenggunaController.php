@@ -6,6 +6,8 @@ use App\Http\Requests\PenggunaRequest;
 use App\Models\Pengguna;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Yajra\DataTables\Contracts\DataTable;
+use Yajra\DataTables\Facades\DataTables;
 
 class PenggunaController extends Controller
 {
@@ -14,7 +16,12 @@ class PenggunaController extends Controller
      */
     public function index()
     {
-        return view('Pengguna.form');
+        return view('Pengguna.table' );
+    }
+
+
+    public function datasource(){
+        return DataTables::of(Pengguna::query())->toJson();
     }
 
     /**
